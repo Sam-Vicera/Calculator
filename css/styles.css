@@ -4,7 +4,10 @@
 }
 
 .outputBox{
-    border: 1px solid black ;
+    border: 1px solid white ;
     height: 30px;
     width: 175px;
+    background-color: white;
+    color: black;
 }
+
