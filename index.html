@@ -20,13 +20,14 @@
   </header>
   <main>
     <div class="container mt-5">
+      
         <div class="row">
-            <div class="col-4"> <label for="Number1">Number 1</label>
-                <input class="form-control" type="text" name="Number1" id="Number1"></div>
+            <div class="col-md-1 mb-4"> <label for="Number1">Number 1</label></div>
+                <div class="col-md-1"><input class="form-control" type="text" name="Number1" id="Number1"></div>
         </div>
         <div class="row">
-            <div class="col-4"> <label for="Number2">Number 2</label>
-                <input class="form-control" type="text" name="Number2" id="Number2"></div>
+            <div class="col-md-1"> <label for="Number2">Number 2</label></div>
+                <div class="col-md-1"><input class="form-control" type="text" name="Number2" id="Number2"></div>
         </div>
         <div class="row mt-3">
             <div class="col-md-3 col-sm-12"><input class="btn btn-danger" type="submit" value="AddBtn" id="AddBtn"></div>
@@ -36,8 +37,14 @@
             
         </div>    
 
-        <div class="row mt-4">Answer:<span  id="Answer"></span></div>
+        <div class="row mt-4">Answer:
+          <div class="col-md-1">
+            <p class="outputBox"><span id="Answer"></span>
+            </p> 
+          </div>
+        </div>
 
+     
         
     </div>
 </body>
