@@ -1,58 +1,52 @@
 window.onload = init
 
 function init(){
-    let addBtn = document.getElementById("AddBtn")
-    addBtn.onclick = onAddBtnClicked
-    
-    let subBtn = document.getElementById("SubtractBtn")
-    subBtn.onclick = onSubBtnClicked
-    
-    let multiplyBtn = document.getElementById("MultiplyBtn")
-    multiplyBtn.onclick = onMultiplyBtnClicked
-    
-    let divBtn = document.getElementById("DivideBtn")
-    divBtn.onclick = onDivBtnClicked
+    document.getElementById("AddBtn").onclick = onAddBtnClicked;
+    document.getElementById("SubtractBtn").onclick = onSubBtnClicked;
+    document.getElementById("MultiplyBtn").onclick = onMultiplyBtnClicked;
+    document.getElementById("DivideBtn").onclick = onDivBtnClicked;
+   
+}
+
+function calculate(operation){
+    let userAnswerOne = parseFloat(document.getElementById("Number1").value);
+    let userAnswerTwo = parseFloat(document.getElementById("Number2").value);
+    let response = 0;
+    switch (operation){
+        case "+":
+            response = userAnswerOne + userAnswerTwo;
+            
+            break;
+        case "-":
+            response = userAnswerOne - userAnswerTwo;
+            
+            break;
+        case "*":
+            response = userAnswerOne * userAnswerTwo;
+          
+            break;
+        case "/":
+            response = userAnswerOne / userAnswerTwo;
+           
+            break;
+        
+    }
+
+    document.getElementById("Answer").value = response;
+
 }
 
 function onAddBtnClicked(){
-    let userAnswerOne = parseFloat(document.getElementById("Number1").value);
-    let userAnswerTwo = parseFloat(document.getElementById("Number2").value)
-    
-    let userAnswer = userAnswerOne + userAnswerTwo;
-    
-    
-    
-    let answerElement = document.getElementById("Answer");
-
-    answerElement.innerText = userAnswer;
+ calculate("+");
 }
-function onSubBtnClicked(){
-    let userAnswerOne = parseFloat(document.getElementById("Number1").value);
-    let userAnswerTwo = parseFloat(document.getElementById("Number2").value)
-    
-    let userAnswer = userAnswerOne - userAnswerTwo;
-    
-    let answerElement = document.getElementById("Answer");
 
-    answerElement.innerText = userAnswer;
+function onSubBtnClicked(){
+    calculate("-");
 }
 function onMultiplyBtnClicked(){
-    let userAnswerOne = parseFloat(document.getElementById("Number1").value);
-    let userAnswerTwo = parseFloat(document.getElementById("Number2").value)
-  
-    let userAnswer = userAnswerOne * userAnswerTwo;
-    
-    let answerElement = document.getElementById("Answer");
-
-    answerElement.innerText = userAnswer;
+    calculate("*");
 }
 function onDivBtnClicked(){
-    let userAnswerOne = parseFloat(document.getElementById("Number1").value);
-    let userAnswerTwo = parseFloat(document.getElementById("Number2").value)
-    
-    let userAnswer = userAnswerOne / userAnswerTwo;
-    
-    let answerElement = document.getElementById("Answer");
-
-    answerElement.innerText = userAnswer;
+  calculate("/");
+  
 }
